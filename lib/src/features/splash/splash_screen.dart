@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:mind_scribe_app/main.dart';
+import 'package:mind_scribe_app/src/routes/route_path.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,10 +15,8 @@ class _SplashState extends State<SplashScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(seconds: 10), () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const MyHomePage(),
-        ));
+      Future.delayed(const Duration(seconds: 15), () {
+        Get.toNamed(RoutePath.home);
       });
     });
   }
