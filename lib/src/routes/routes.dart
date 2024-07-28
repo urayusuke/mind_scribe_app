@@ -7,11 +7,11 @@ class Routes {
   static final pages = [
     GetPage(
       name: RoutePath.initialRoute,
-      page: () => const SplashScreen(),
+      page: () => SplashScreen(),
     ),
     GetPage(
       name: RoutePath.splash,
-      page: () => const SplashScreen(),
+      page: () => SplashScreen(),
     ),
     GetPage(
       name: RoutePath.home,

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mind_scribe_app/common/services/shared_preferences.dart';
 import 'package:mind_scribe_app/l10n/l10n.dart';
 import 'package:mind_scribe_app/src/routes/route_path.dart';
 import 'package:mind_scribe_app/src/routes/routes.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  // SharedPreferencesの初期化
+  await SharedPreferencesService.init();
+
   runApp(
     GetMaterialApp(
       localizationsDelegates: L10n.localizationsDelegates,
