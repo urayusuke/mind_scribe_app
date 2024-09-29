@@ -96,6 +96,48 @@ abstract class L10n {
   /// In ja, this message translates to:
   /// **'ホーム'**
   String get home;
+
+  /// No description provided for @post.
+  ///
+  /// In ja, this message translates to:
+  /// **'投稿'**
+  String get post;
+
+  /// No description provided for @description.
+  ///
+  /// In ja, this message translates to:
+  /// **'自分が思っていることを書いてください。何を書いても大丈夫です'**
+  String get description;
+
+  /// No description provided for @spell.
+  ///
+  /// In ja, this message translates to:
+  /// **'綴る'**
+  String get spell;
+
+  /// No description provided for @sad.
+  ///
+  /// In ja, this message translates to:
+  /// **'悲しい'**
+  String get sad;
+
+  /// No description provided for @neutral.
+  ///
+  /// In ja, this message translates to:
+  /// **'普通'**
+  String get neutral;
+
+  /// No description provided for @happy.
+  ///
+  /// In ja, this message translates to:
+  /// **'楽しい'**
+  String get happy;
+
+  /// No description provided for @whiteSpace.
+  ///
+  /// In ja, this message translates to:
+  /// **''**
+  String get whiteSpace;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
