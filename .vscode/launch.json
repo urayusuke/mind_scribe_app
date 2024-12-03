@@ -1,0 +1,25 @@
+{
+    // 使用可能なデバッグ構成のリスト
+    "configurations": [
+        {
+            "name": "Flutter Debug",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart", // エントリーポイントのファイルを指定
+            "flutterMode": "debug", // デバッグモード
+            "env": {
+                "FLUTTER_ENV": "development"
+            }
+        },
+        {
+            "name": "Flutter Release",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart", // エントリーポイントのファイルを指定
+            "flutterMode": "release", // リリースモード
+            "env": {
+                "FLUTTER_ENV": "production"
+            }
+        }
+    ]
+}

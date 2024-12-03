@@ -1,4 +1,11 @@
 {
   "@@locale": "ja",
-  "home": "ホーム"
+  "home": "ホーム",
+  "post": "投稿",
+  "description":"自分が思っていることを書いてください。何を書いても大丈夫です",
+  "spell": "綴る",
+  "sad": "悲しい",
+  "neutral": "普通",
+  "happy": "楽しい",
+  "whiteSpace":""
 }

@@ -42,6 +42,6 @@ class SplashController extends GetxController {
       return;
     }
 
-    Get.offNamed(RoutePath.splash);
+    Get.offNamed(RoutePath.post);
   }
 }
