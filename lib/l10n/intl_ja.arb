@@ -7,5 +7,8 @@
   "sad": "悲しい",
   "neutral": "普通",
   "happy": "楽しい",
-  "whiteSpace":""
+  "whiteSpace":"",
+  "postList":"投稿一覧",
+  "search":"検索",
+  "myPage":"マイページ"
 }

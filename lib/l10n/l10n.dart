@@ -138,6 +138,24 @@ abstract class L10n {
   /// In ja, this message translates to:
   /// **''**
   String get whiteSpace;
+
+  /// No description provided for @postList.
+  ///
+  /// In ja, this message translates to:
+  /// **'投稿一覧'**
+  String get postList;
+
+  /// No description provided for @search.
+  ///
+  /// In ja, this message translates to:
+  /// **'検索'**
+  String get search;
+
+  /// No description provided for @myPage.
+  ///
+  /// In ja, this message translates to:
+  /// **'マイページ'**
+  String get myPage;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

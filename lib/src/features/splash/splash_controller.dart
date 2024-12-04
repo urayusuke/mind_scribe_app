@@ -38,7 +38,7 @@ class SplashController extends GetxController {
 
   void navigateToNextScreen() {
     if (state.isFirstLaunch) {
-      Get.offNamed(RoutePath.home);
+      Get.offNamed(RoutePath.post);
       return;
     }
 
