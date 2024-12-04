@@ -27,4 +27,13 @@ class L10nJa extends L10n {
 
   @override
   String get whiteSpace => '';
+
+  @override
+  String get postList => '投稿一覧';
+
+  @override
+  String get search => '検索';
+
+  @override
+  String get myPage => 'マイページ';
 }
