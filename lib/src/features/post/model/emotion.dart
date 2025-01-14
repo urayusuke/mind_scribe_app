@@ -24,4 +24,17 @@ extension EmotionExtension on Emotion {
         return L10n.of(context)!.happy;
     }
   }
+
+  IconData get icon {
+    switch (this) {
+      case Emotion.sad:
+        return Icons.sentiment_very_dissatisfied;
+      case Emotion.neutral:
+        return Icons.sentiment_neutral;
+      case Emotion.happy:
+        return Icons.sentiment_very_satisfied;
+      default:
+        return Icons.sentiment_very_satisfied;
+    }
+  }
 }

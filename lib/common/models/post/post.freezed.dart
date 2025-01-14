@@ -22,6 +22,10 @@ Post _$PostFromJson(Map<String, dynamic> json) {
 mixin _$Post {
   String get content => throw _privateConstructorUsedError;
   Emotion get emotion => throw _privateConstructorUsedError;
+  @DateTimeConverter()
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  @DateTimeConverter()
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +37,11 @@ abstract class $PostCopyWith<$Res> {
   factory $PostCopyWith(Post value, $Res Function(Post) then) =
       _$PostCopyWithImpl<$Res, Post>;
   @useResult
-  $Res call({String content, Emotion emotion});
+  $Res call(
+      {String content,
+      Emotion emotion,
+      @DateTimeConverter() DateTime createdAt,
+      @DateTimeConverter() DateTime? updatedAt});
 }
 
 /// @nodoc
@@ -51,6 +59,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
   $Res call({
     Object? content = null,
     Object? emotion = null,
+    Object? createdAt = null,
+    Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
       content: null == content
@@ -61,6 +71,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.emotion
           : emotion // ignore: cast_nullable_to_non_nullable
               as Emotion,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -72,7 +90,11 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
       __$$PostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String content, Emotion emotion});
+  $Res call(
+      {String content,
+      Emotion emotion,
+      @DateTimeConverter() DateTime createdAt,
+      @DateTimeConverter() DateTime? updatedAt});
 }
 
 /// @nodoc
@@ -87,6 +109,8 @@ class __$$PostImplCopyWithImpl<$Res>
   $Res call({
     Object? content = null,
     Object? emotion = null,
+    Object? createdAt = null,
+    Object? updatedAt = freezed,
   }) {
     return _then(_$PostImpl(
       content: null == content
@@ -97,6 +121,14 @@ class __$$PostImplCopyWithImpl<$Res>
           ? _value.emotion
           : emotion // ignore: cast_nullable_to_non_nullable
               as Emotion,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -104,7 +136,11 @@ class __$$PostImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PostImpl implements _Post {
-  const _$PostImpl({this.content = '', this.emotion = Emotion.neutral});
+  const _$PostImpl(
+      {this.content = '',
+      this.emotion = Emotion.neutral,
+      @DateTimeConverter() required this.createdAt,
+      @DateTimeConverter() this.updatedAt});
 
   factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
       _$$PostImplFromJson(json);
@@ -115,10 +151,16 @@ class _$PostImpl implements _Post {
   @override
   @JsonKey()
   final Emotion emotion;
+  @override
+  @DateTimeConverter()
+  final DateTime createdAt;
+  @override
+  @DateTimeConverter()
+  final DateTime? updatedAt;
 
   @override
   String toString() {
-    return 'Post(content: $content, emotion: $emotion)';
+    return 'Post(content: $content, emotion: $emotion, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -127,12 +169,17 @@ class _$PostImpl implements _Post {
         (other.runtimeType == runtimeType &&
             other is _$PostImpl &&
             (identical(other.content, content) || other.content == content) &&
-            (identical(other.emotion, emotion) || other.emotion == emotion));
+            (identical(other.emotion, emotion) || other.emotion == emotion) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, content, emotion);
+  int get hashCode =>
+      Object.hash(runtimeType, content, emotion, createdAt, updatedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -149,8 +196,11 @@ class _$PostImpl implements _Post {
 }
 
 abstract class _Post implements Post {
-  const factory _Post({final String content, final Emotion emotion}) =
-      _$PostImpl;
+  const factory _Post(
+      {final String content,
+      final Emotion emotion,
+      @DateTimeConverter() required final DateTime createdAt,
+      @DateTimeConverter() final DateTime? updatedAt}) = _$PostImpl;
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
 
@@ -158,6 +208,12 @@ abstract class _Post implements Post {
   String get content;
   @override
   Emotion get emotion;
+  @override
+  @DateTimeConverter()
+  DateTime get createdAt;
+  @override
+  @DateTimeConverter()
+  DateTime? get updatedAt;
   @override
   @JsonKey(ignore: true)
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>

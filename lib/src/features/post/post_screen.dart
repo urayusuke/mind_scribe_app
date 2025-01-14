@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mind_scribe_app/common/widgets/footer.dart';
+import 'package:mind_scribe_app/common/widgets/footer/footer.dart';
 import 'package:mind_scribe_app/l10n/l10n.dart';
 import 'package:get/get.dart';
 import 'package:mind_scribe_app/src/features/post/model/emotion.dart';
