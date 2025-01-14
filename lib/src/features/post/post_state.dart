@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
+import 'package:mind_scribe_app/common/models/post/post.dart';
 import 'package:mind_scribe_app/src/features/post/model/emotion.dart';
-import 'package:mind_scribe_app/src/features/post/model/post.dart';
 
 class PostState extends GetxController {
   // Single post data
-  var post = const Post().obs;
+  var post = Post(createdAt: DateTime.now()).obs;
 
   // Loading state
   var isLoading = false.obs;
